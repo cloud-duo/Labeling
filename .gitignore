@@ -102,3 +102,11 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+\.idea/
+
+test/
+
+keys\.json
+
+test\.jpg
