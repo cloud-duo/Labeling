@@ -26,9 +26,6 @@ def label(id):
     for blob in blobs:
         if blob.name[-1] == '/':
             continue
-        if not os.path.exists(id):
-            os.mkdir(id)
-        # blob.download_to_filename(blob.name)
         uri = "gs://" + bucket_name + "/" + blob.name
 
         image = vision.types.Image()
