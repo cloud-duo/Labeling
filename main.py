@@ -51,6 +51,12 @@ def hello():
     """Return a friendly HTTP greeting."""
     return 'this will be the labels!'
 
+@app.after_request
+def after_request(response):
+    header = response.headers
+    header['Access-Control-Allow-Origin'] = '*'
+    return response
+
 
 if __name__ == '__main__':
     # This is used when running locally only. When deploying to Google App
